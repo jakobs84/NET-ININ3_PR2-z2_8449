@@ -97,6 +97,7 @@ namespace NET_ININ3_PR2_z1
         {
             BuforDziałania = działanie;
             flagaDziałania = true;
+            LiczbaA = double.Parse(buforIO);
             IO = WykonajDziałanie().ToString();
         }
 
@@ -118,6 +119,16 @@ namespace NET_ININ3_PR2_z1
                 return LiczbaA * LiczbaA;
             else if (BuforDziałania == "-")
                 return LiczbaA - LiczbaB;
+            else if (BuforDziałania == "*")
+                return LiczbaA * LiczbaB;
+            else if (BuforDziałania == "/")
+                return LiczbaA / LiczbaB;
+            else if (BuforDziałania == "x²")
+                return liczbaA * liczbaA;
+            else if (BuforDziałania == "√")
+                return Math.Pow(liczbaA, 0.5);
+            else if (BuforDziałania == "1/x")
+                return 1.0 / liczbaA;
             else
                 return 0;
         }
