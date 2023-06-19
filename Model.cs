@@ -56,12 +56,30 @@ namespace NET_ININ3_PR2_z1
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bufory"));
             }
         }
+
+        readonly Dictionary<string, (string L, string P)> działaniaJednoargumentowe = new Dictionary<string, (string L, string P)>()
+        {
+            ["x²"] = ("", "²"),
+            ["√"] = ("√", ""),
+            ["%"] = ("", ""),
+            ["1/x"] = ("1/", ""),
+            ["!"] = ("", "!"),
+            ["ln"] = ("ln(", ")"),
+            ["Floor"] = ("", ""),
+            ["Ceiling"] = ("", "")
+
+        };
+
+
+
         public string Bufory { 
             get {
                 if (buforDziałania == null)
                     return "";
                 if (flagaDziałania == false)
                     return $"{liczbaA} {buforDziałania}";
+                if (działaniaJednoargumentowe.ContainsKey(BuforDziałania))
+                    return działaniaJednoargumentowe[BuforDziałania].L + LiczbaA + działaniaJednoargumentowe[BuforDziałania].P;
                 return $"{liczbaA} {buforDziałania} {liczbaB}";
             }
         }
