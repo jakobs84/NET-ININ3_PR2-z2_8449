@@ -64,7 +64,7 @@
         
         <Button
             Grid.Row="3"
-            Grid.Column="0"
+            Grid.Column="0" Click="DziałanieJednoargumentowe"
             >1/x</Button>
         <Button
             Grid.Row="3"
@@ -72,11 +72,11 @@
             >x²</Button>
         <Button
             Grid.Row="3"
-            Grid.Column="2"
+            Grid.Column="2" Click="DziałanieJednoargumentowe"
             >√</Button>
         <Button
             Grid.Row="3"
-            Grid.Column="3"
+            Grid.Column="3" Click="DziałanieZwykłe"
             >/</Button>
         
         <Button
@@ -99,7 +99,7 @@
             >9</Button>
         <Button
             Grid.Row="4"
-            Grid.Column="3"
+            Grid.Column="3" Click="DziałanieZwykłe"
             >*</Button>
 
         <Button
@@ -122,7 +122,7 @@
             >6</Button>
         <Button
             Grid.Row="5"
-            Grid.Column="3"
+            Grid.Column="3" Click="DziałanieZwykłe"
             >-</Button>
 
         <Button

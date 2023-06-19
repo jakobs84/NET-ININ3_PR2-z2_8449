@@ -116,6 +116,8 @@ namespace NET_ININ3_PR2_z1
                 return LiczbaA + LiczbaB;
             else if (BuforDziałania == "x²")
                 return LiczbaA * LiczbaA;
+            else if (BuforDziałania == "-")
+                return LiczbaA - LiczbaB;
             else
                 return 0;
         }
