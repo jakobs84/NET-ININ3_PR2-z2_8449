@@ -45,7 +45,7 @@
 
         <Button
             Grid.Row="2"
-            Grid.Column="0" Click="DziałanieJednoargumentowe"
+            Grid.Column="0" Click="DziałanieZwykłe"
             >%</Button>
         <Button
             Style="{StaticResource Ważny}"
