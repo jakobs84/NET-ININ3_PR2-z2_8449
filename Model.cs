@@ -29,9 +29,11 @@ namespace NET_ININ3_PR2_z1
             {
                 buforIO = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IO"));
+                //
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bufory"));
             }
         }
+
 
         public double LiczbaA {
             get => liczbaA;
@@ -40,6 +42,8 @@ namespace NET_ININ3_PR2_z1
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bufory"));
             }
         }
+
+
         public double LiczbaB {
             get => liczbaB;
             set
@@ -48,6 +52,8 @@ namespace NET_ININ3_PR2_z1
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bufory"));
             }
         }
+
+
         public string BuforDziałania {
             get => buforDziałania;
             set
@@ -64,9 +70,9 @@ namespace NET_ININ3_PR2_z1
             ["%"] = ("", ""),
             ["1/x"] = ("1/", ""),
             ["!"] = ("", "!"),
-            ["ln"] = ("ln(", ")"),
-            ["Floor"] = ("", ""),
-            ["Ceiling"] = ("", "")
+            ["LN"] = ("ln(", ")"),
+            ["FLO"] = ("", ""),
+            ["CEL"] = ("", "")
 
         };
 
@@ -133,6 +139,8 @@ namespace NET_ININ3_PR2_z1
         {
             if (BuforDziałania == "+")
                 return LiczbaA + LiczbaB;
+            if (BuforDziałania == "%")
+                return (liczbaA * liczbaB) / 100; 
             else if (BuforDziałania == "x²")
                 return LiczbaA * LiczbaA;
             else if (BuforDziałania == "-")
@@ -147,8 +155,25 @@ namespace NET_ININ3_PR2_z1
                 return Math.Pow(liczbaA, 0.5);
             else if (BuforDziałania == "1/x")
                 return 1.0 / liczbaA;
-            else
-                return 0;
+            else if (BuforDziałania == "MOD")
+                return liczbaA % liczbaB;
+            else if (BuforDziałania == "LN")
+                return Math.Log(liczbaA);
+            else if (BuforDziałania == "FLO")
+                return Math.Floor(liczbaA);
+            else if (BuforDziałania == "CEL")
+                return Math.Ceiling(liczbaA);
+            else if (buforDziałania == "!")
+            {
+               int  wynik = 1;
+
+                for (int i = 1; i <= Math.Round(liczbaA); i++)
+                {
+                    wynik *= i;
+                }
+                return wynik;
+            }
+            return 0;
         }
 
         internal void Resetuj()

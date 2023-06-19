@@ -9,11 +9,12 @@
     
     Title="Nasze okno"
     Height="650"
-    Width="400"
+    Width="420"
     FontSize="24"
     >
-    <Grid>
+    <Grid HorizontalAlignment="Left" Width="400">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -31,20 +32,20 @@
         </Grid.RowDefinitions>
 
         <TextBlock
-            Grid.ColumnSpan="4"
+            Grid.ColumnSpan="5"
             Style="{DynamicResource Bufory}"
-            Text="{Binding Bufory}"
+            Text="{Binding Bufory}" Margin="5,0,10,0"
             />
         <TextBlock
-            Grid.ColumnSpan="4"
+            Grid.ColumnSpan="5"
             Grid.Row="1"
             Style="{DynamicResource IO}"
-            Text="{Binding IO}"
+            Text="{Binding IO}" Margin="5,0,10,0"
             />
 
         <Button
             Grid.Row="2"
-            Grid.Column="0" Click="DziałanieProcentowe"
+            Grid.Column="0" Click="DziałanieJednoargumentowe"
             >%</Button>
         <Button
             Style="{StaticResource Ważny}"
@@ -61,6 +62,10 @@
             Grid.Row="2"
             Grid.Column="3" Click="Cofnij"
             >🠔</Button>
+        <Button
+            Grid.Row="2"
+            Grid.Column="4" Click="DziałanieZwykłe"
+            >MOD</Button> 
         
         <Button
             Grid.Row="3"
@@ -78,6 +83,10 @@
             Grid.Row="3"
             Grid.Column="3" Click="DziałanieZwykłe"
             >/</Button>
+        <Button
+            Grid.Row="3"
+            Grid.Column="4" Click="DziałanieJednoargumentowe"
+            >LN</Button>
         
         <Button
             Style="{StaticResource Cyfra}"
@@ -101,7 +110,11 @@
             Grid.Row="4"
             Grid.Column="3" Click="DziałanieZwykłe"
             >*</Button>
-
+        <Button
+            Grid.Row="4"
+            Grid.Column="4" Click="DziałanieJednoargumentowe"
+            >FLO</Button>
+        
         <Button
             Style="{StaticResource Cyfra}"
             Grid.Row="5"
@@ -124,7 +137,11 @@
             Grid.Row="5"
             Grid.Column="3" Click="DziałanieZwykłe"
             >-</Button>
-
+        <Button
+            Grid.Row="5"
+            Grid.Column="4" Click="DziałanieJednoargumentowe"
+            >CEL</Button>
+        
         <Button
             Style="{StaticResource Cyfra}"
             Grid.Row="6"
@@ -147,7 +164,10 @@
             Grid.Row="6"
             Grid.Column="3" Click="DziałanieZwykłe"
             >+</Button>
-
+        <Button
+            Grid.Row="6"
+            Grid.Column="4" Click="DziałanieJednoargumentowe"
+            >!</Button>
         <Button
             Style="{StaticResource Cyfra}"
             Grid.Row="7"
@@ -169,5 +189,6 @@
             Grid.Row="7"
             Grid.Column="3" Click="PodajWynik"
             >=</Button>
+
     </Grid>
 </Window>
