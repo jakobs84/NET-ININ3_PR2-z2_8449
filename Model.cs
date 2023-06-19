@@ -6,6 +6,8 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+// GD8449 Jakub A. 
+
 namespace NET_ININ3_PR2_z1
 {
     class Model : INotifyPropertyChanged

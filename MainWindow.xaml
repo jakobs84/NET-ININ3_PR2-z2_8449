@@ -7,11 +7,13 @@
     xmlns:local="clr-namespace:NET_ININ3_PR2_z1"
     mc:Ignorable="d"
     
-    Title="Nasze okno"
+    Title="GD8449 Jakub"
     Height="650"
     Width="420"
     FontSize="24"
     >
+    
+    
     <Grid HorizontalAlignment="Left" Width="400">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
